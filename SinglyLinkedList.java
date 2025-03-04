@@ -16,7 +16,7 @@ public class SinglyLinkedList<E> {
         firstNode = lastNode = null;
     }
 
-    public void insertResepDepan(E insertItem) {
+    public void tambahResepDepan(E insertItem) {
         ListNode newNode = new ListNode(insertItem);
 
         if (isEmpty()) {
@@ -28,7 +28,7 @@ public class SinglyLinkedList<E> {
         }
     }
 
-    public void insertResepBelakang(E insertItem) {
+    public void tambahResepBelakang(E insertItem) {
         ListNode newNode = new ListNode(insertItem);
         if (isEmpty()) { // firstNode and lastNode refer to same object
             firstNode = lastNode = new ListNode<E>(insertItem);
@@ -91,7 +91,7 @@ public class SinglyLinkedList<E> {
         System.out.println();
     }
 
-    public void cari(String name) {
+    public void cariResep(String name) {
         ListNode<E> current = firstNode;
         while (current != null) {
             if (current.data instanceof Resep) {
