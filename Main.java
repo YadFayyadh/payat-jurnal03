@@ -31,9 +31,9 @@ public class Main {
                     scanner.nextLine();
                     Resep resepBaru = new Resep(nama, bahan, waktu);
                     if (pilihan == 1) {
-                        daftarResep.insertResepDepan(resepBaru);
+                        daftarResep.tambahResepDepan(resepBaru);
                     } else {
-                        daftarResep.insertResepBelakang(resepBaru);
+                        daftarResep.tambahResepBelakang(resepBaru);
                     }
                     break;
                 case 3:
@@ -52,7 +52,7 @@ public class Main {
                 case 6:
                     System.out.print("Masukkan Nama Resep yang Dicari: ");
                     String cariNama = scanner.nextLine();
-                    daftarResep.cari(cariNama);
+                    daftarResep.cariResep(cariNama);
                     break;
                 case 7:
                     System.out.println("Keluar dari program.");
