@@ -13,6 +13,6 @@ public class Resep {
 
     @Override
     public String toString() {
-        return "\n Nama Resep = " + namaResep + ", \n bahanUtama = " + bahanUtama + ", \n waktu = " + waktu + "\n\n";
+        return "\n Nama Resep = " + namaResep + ", \n bahanUtama = " + bahanUtama + ", \n waktu = " + waktu + " Menit \n\n";
     }
 }
