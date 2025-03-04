@@ -72,7 +72,6 @@ public class SinglyLinkedList<E> {
         return removedItem;
     }
 
-
     private boolean isEmpty() {
         return firstNode == null;
     }
@@ -95,16 +94,16 @@ public class SinglyLinkedList<E> {
     public void cari(String name) {
         ListNode<E> current = firstNode;
         while (current != null) {
-            if (((Resep) current.data).namaResep.equalsIgnoreCase(name)) {
-                System.out.println("Resep ditemukan: " + current.data);
-                return;
+            if (current.data instanceof Resep) {
+                Resep resep = (Resep) current.data;
+                if (resep.namaResep.equalsIgnoreCase(name)) {
+                    System.out.println("Resep ditemukan: " + resep);
+                    return;
+                }
             }
             current = current.next;
         }
         System.out.println("Resep tidak ditemukan.");
     }
-
-
-
 
 }
